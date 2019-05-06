@@ -1,0 +1,19 @@
+Practice Exercises (IMPORTANT)
+Section 1, Lecture 1
+If you want to follow all steps along with me and complete course challenges please perform following steps:
+
+
+
+1. Install Node.js for your operating system https://nodejs.org/
+
+2. Install Visual Studio Code Editor (other editor would be OK too) https://code.visualstudio.com/
+
+3. Create project folder on your computer with any desirable title. In my case title of the initial project folder is "babel-intro".
+
+4. Inside of the project folder create "src" subfolder and add empty "index.js" file to it.
+
+
+
+And you are good to go!
+
+Happy Learning!

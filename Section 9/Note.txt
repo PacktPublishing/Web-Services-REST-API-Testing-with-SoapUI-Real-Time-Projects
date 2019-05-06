@@ -1,0 +1,14 @@
+For successful project run, As shown in videos, Please install all the below jars
+
+
+All the jars in Lib directory of SoapUI
+
+
+Single jar present in bin directory
+
+
+Jcommander jar from Web
+
+
+TesTNG jar from Web
+

@@ -1,0 +1,58 @@
+Below is the Groovy script used in the lectures
+
+import com.eviware.soapui.support.XmlHolder
+import com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext
+log.info "Hello this is my first program"
+//Context variable is used to access and modify the properties of your testcase
+//rahulonlinetutor@gmail.com
+//scope of context lies in Testcase only!
+log.info context.expand('${#TestCase#name}')
+log.info context.expand('${#TestCase#age}')
+// To access/modify any property you have to come through its parent only
+//Project->Test Suite -> Test Cases_> TestStep
+log.info testRunner.testCase.testSuite.testCases["GetEmployee"].getPropertyValue("id")
+ testRunner.testCase.testSuite.testCases["GetEmployee"].setPropertyValue("id","123")
+log.info testRunner.testCase.testSuite.testCases["AddEmployee"].getPropertyValue("age")
+log.info testRunner.testCase.getPropertyValue("dept")
+log.info testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].getPropertyValue("Request")
+def project=testRunner.testCase.testSuite.project
+project.getPropertyValue("gender")
+//Hit Add employee Request with properties from Testcase level.
+def addReq=testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["add"].getPropertyValue("Request")
+def name=testRunner.testCase.testSuite.testCases["AddEmployee"].getPropertyValue("name")
+def id=testRunner.testCase.testSuite.testCases["AddEmployee"].getPropertyValue("id")
+def age=testRunner.testCase.testSuite.testCases["AddEmployee"].getPropertyValue("age")
+ def xmlAdd= new XmlHolder(addReq) //
+ xmlAdd.setNodeValue("//typ:addEmployee/typ:name",name)
+ 
+ xmlAdd.setNodeValue("//typ:addEmployee/typ:id",id)
+  xmlAdd.setNodeValue("//typ:addEmployee/typ:Department","cse")
+   xmlAdd.setNodeValue("//typ:addEmployee/typ:age",age)
+  def newAddXml= xmlAdd.getXml();
+  testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["add"].setPropertyValue("Request",newAddXml)
+  //log.info newAddXml
+ 
+ //call the service-
+ //context of AddEmployee testcase should be passed as Add step which we are trying to run belongs to that Testcase
+def addTestStep=testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["add"]
+def contextAddEmployee= new WsdlTestRunContext(addTestStep);
+ 
+ addTestStep.run(testRunner,contextAddEmployee)
+ //Hit GetEmployee and generate response..Validate the response if it have the name which added in our earlier Step
+ def getReq=testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].getPropertyValue("Request")
+def getEmpxml= new XmlHolder(getReq)
+ getEmpxml.setNodeValue("//typ:getEmployeeDetails/typ:employeeName",name)
+ def newgetEmpxml=getEmpxml.getXml()
+testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].setPropertyValue("Request",newgetEmpxml)
+def getTestStep= testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"];
+def contextGetEmployee= new WsdlTestRunContext(getTestStep);
+getTestStep.run(testRunner,contextGetEmployee)
+//Validation -
+ def getRes=testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].getPropertyValue("Response")
+ 
+def getEmpRes= new XmlHolder(getRes)
+def Getresponse= getEmpRes.getNodeValue("//ns:name")
+log.info Getresponse
+log.info name
+assert Getresponse==name
+//Delete - 

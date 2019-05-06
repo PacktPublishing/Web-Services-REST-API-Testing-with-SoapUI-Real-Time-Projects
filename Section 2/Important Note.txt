@@ -1,0 +1,35 @@
+In the next lecture, I will go through instructions to setup local service in your machine which we will be using in next few lectures for practice.
+
+
+If you have any troubles in Setting up the service which involves multiple software's. You can simply use below Service URL which is hosted on cloud 
+to save your time and skip next lecture completly :)
+
+http://216.10.245.166:8080/axis2/services/EmployeeManagementService?wsdl  
+Above WSDL is same as the one which you will seeing in the next lecture to setup in your local.
+
+You can import above URL   instead of below
+ when ever I refer to the WSDL link in the lectures
+
+http://localhost:8082/axis2/services/EmployeeManagementService?wsdl  
+-
+
+******************************************************************************************************************************************************************************
+
+
+For the Students  who want to use local service by setting up in your machines instead of depending on Internet connection
+
+THEN Please remember below points while watching next lecture-  Local Service setup will NOT WORK if you dont follow below instructions
+
+Before watching next video firstly Get ready by downloading the Server repo and query.txt from below links
+https://drive.google.com/open?id=1R0HbG-sPU-X9khqwMXnMuWqNR1VaVWyw
+
+https://drive.google.com/open?id=1__vMUuUUxtK2MNHR_9RCcWGghgo93HJX
+
+2. You will be instructed to download MYSQL in the next video. Before downloading mysql make sure you dont have any sql instances in your machine.. if there are, please uninstall all of them and download MYSQL.. 
+
+3.  while installing MYSQL When Prompted, Please use mysql username and password as root and root respectively..
+ Port number should be 3306
+
+4.  Make sure your java version is 1.8 and set JAVA_HOME is set in system variables..
+
+
