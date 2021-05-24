@@ -1,0 +1,64 @@
+2018-07-27 06:47:10,117 WARN  [SoapUI] Missing folder [C:\Users\rahul\dev\SoapUITest\ext] for external libraries
+2018-07-27 06:47:10,673 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\rahul\soapui-settings.xml]
+2018-07-27 06:48:12,437 INFO  [PluginManager] 0 plugins loaded in 300 ms
+2018-07-27 06:48:12,437 INFO  [DefaultSoapUICore] All plugins loaded
+2018-07-27 06:49:04,910 INFO  [WsdlProject] Loaded project from [file:/C:/Users/rahul/Documents/LibraryAPI.xml]
+2018-07-27 06:49:37,226 INFO  [WsdlProject] Loaded project from [file:/C:/Users/rahul/Documents/Employee.xml]
+2018-07-27 06:50:06,447 INFO  [log] MOON
+2018-07-27 06:50:07,386 ERROR [SoapUI] An error occurred [assert Getresponse==name
+       |          | |
+       MOON       | Moon
+                  false], see error log for details
+2018-07-27 06:50:07,642 ERROR [errorlog] Assertion failed: 
+
+assert Getresponse==name
+       |          | |
+       MOON       | Moon
+                  false
+
+Assertion failed: 
+
+assert Getresponse==name
+       |          | |
+       MOON       | Moon
+                  false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:399)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:655)
+	at Script1.run(Script1.groovy:18)
+	at com.eviware.soapui.support.scripting.groovy.SoapUIGroovyScriptEngine.run(SoapUIGroovyScriptEngine.java:90)
+	at com.eviware.soapui.impl.wsdl.teststeps.WsdlGroovyScriptTestStep.run(WsdlGroovyScriptTestStep.java:141)
+	at com.eviware.soapui.impl.wsdl.support.AbstractTestCaseRunner.runTestStep(AbstractTestCaseRunner.java:211)
+	at com.eviware.soapui.impl.wsdl.testcase.WsdlTestCaseRunner.runCurrentTestStep(WsdlTestCaseRunner.java:47)
+	at com.eviware.soapui.impl.wsdl.support.AbstractTestCaseRunner.internalRun(AbstractTestCaseRunner.java:138)
+	at com.eviware.soapui.impl.wsdl.support.AbstractTestCaseRunner.internalRun(AbstractTestCaseRunner.java:46)
+	at com.eviware.soapui.impl.wsdl.support.AbstractTestRunner.run(AbstractTestRunner.java:128)
+	at com.eviware.soapui.impl.wsdl.support.AbstractTestRunner.start(AbstractTestRunner.java:76)
+	at com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase.run(WsdlTestCase.java:595)
+	at Soap.testRunner.SoapTest(testRunner.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.TestNG.privateMain(TestNG.java:1339)
+	at org.testng.TestNG.main(TestNG.java:1308)
+2018-07-27 06:50:07,998 INFO  [WsdlProject] Loaded project from [file:/C:/Users/rahul/Documents/Employee.xml]
+2018-07-27 06:50:08,754 INFO  [WsdlProject] Loaded project from [file:/C:/Users/rahul/Documents/LibraryAPI.xml]
+2018-07-27 06:50:09,778 INFO  [log] hey I am the second Testsuite

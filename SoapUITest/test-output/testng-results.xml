@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="180497" started-at="2018-07-27T10:47:09Z" finished-at="2018-07-27T10:50:09Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="180497" started-at="2018-07-27T10:47:09Z" finished-at="2018-07-27T10:50:09Z">
+      <class name="Rest.restRunner2">
+        <test-method status="PASS" signature="RestTest2()[pri:0, instance:Rest.restRunner2@5a39699c]" name="RestTest2" duration-ms="1536" started-at="2018-07-27T06:50:08Z" finished-at="2018-07-27T06:50:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RestTest2 -->
+      </class> <!-- Rest.restRunner2 -->
+      <class name="Soap.testRunner2">
+        <test-method status="PASS" signature="singleTest()[pri:0, instance:Soap.testRunner2@56cbfb61]" name="singleTest" duration-ms="256" started-at="2018-07-27T06:50:07Z" finished-at="2018-07-27T06:50:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- singleTest -->
+      </class> <!-- Soap.testRunner2 -->
+      <class name="Soap.testRunner">
+        <test-method status="FAIL" signature="SoapTest()[pri:0, instance:Soap.testRunner@3cb5cdba]" name="SoapTest" duration-ms="35057" started-at="2018-07-27T06:49:32Z" finished-at="2018-07-27T06:50:07Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [FAILED] but found [FINISHED]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [FAILED] but found [FINISHED]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:167)
+	at Soap.testRunner.SoapTest(testRunner.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.TestNG.privateMain(TestNG.java:1339)
+	at org.testng.TestNG.main(TestNG.java:1308)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SoapTest -->
+      </class> <!-- Soap.testRunner -->
+      <class name="Rest.restRunner">
+        <test-method status="PASS" signature="RestTest1()[pri:0, instance:Rest.restRunner@4563e9ab]" name="RestTest1" duration-ms="143480" started-at="2018-07-27T06:47:09Z" finished-at="2018-07-27T06:49:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RestTest1 -->
+      </class> <!-- Rest.restRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
